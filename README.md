@@ -1,2 +1,2 @@
-# teste-tec-dev-pl-idinheiro
+# Projeto iDinheiro - dev pl.
 Teste técnico para processo seletivo iDinheiro - dev pl.
