@@ -34,7 +34,8 @@ npm install
 
 ## Iniciar servidor de desenvolvimento
 
-``` yarn dev
+``` 
+yarn dev
 #or
 npm run dev
 ```
