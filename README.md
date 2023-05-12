@@ -14,7 +14,8 @@ Você pode configurar este projeto usando gerenciadores de pacotes npm ou yarn.
 
 ## Clonar repositório
 
-``` https://github.com/biancasmtr/project-idinheiro.git
+``` 
+https://github.com/biancasmtr/project-idinheiro.git
 ```
 
 ## Navegue até o repositório clonado
