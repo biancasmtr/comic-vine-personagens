@@ -12,7 +12,7 @@ Certifique-se de ter instalado o Node.js 12.22.0 ou superior em sua máquina. Vo
 
 Você pode configurar este projeto usando gerenciadores de pacotes npm ou yarn.
 
-##Clonar repositório
+## Clonar repositório
 
 ```https://github.com/biancasmtr/project-idinheiro.git
 ```
