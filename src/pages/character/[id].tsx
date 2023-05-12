@@ -2,6 +2,7 @@ import { FC } from "react";
 import axios from "axios";
 import { GetServerSideProps } from "next";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const urlBase = "https://comicvine.gamespot.com/api/";
 const route = "character/4005";
@@ -25,27 +26,31 @@ const Character: FC<CharacterProps> = ({ character }) => {
   const router = useRouter();
 
   return (
-    <div className="bg-gray-200 h-screen">
-      <div className="container mx-auto py-12 bg-white rounded-lg shadow-lg px-8 py-10">
+    <div className="container mx-auto py-8 px-8 min-h-100vh">
+      <header>
+        <title>Comic Vine - Detalhes personagens</title>
+      </header>
+      <div className="container mx-auto py-8 bg-white rounded-lg shadow-lg px-8 min-h-100vh">
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-white bg-red-700 bg-opacity-75 px-4 py-2 rounded-md">
             {character.name}
           </h1>
         </div>
-        <div className="flex flex-col md:flex-row items-center">
-          <div className="md:mr-10 mb-6 md:mb-0">
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <div className="md:mr-10 mb-6 md:mb-0 flex justify-center">
             <img
               src={character.image.original_url}
               alt={character.name}
               className="rounded-lg shadow-md"
-              width={400}
+              width={300}
             />
           </div>
           <div className="text-left">
             <div className="mb-4">
               <strong className="mr-2">Nome real:</strong>
-              {character.real_name == null ? "Não possui este dado" : character.real_name}
+              {character.real_name == null ? <span className="text-red-500">Não possui essa informação</span> : character.real_name}
             </div>
+
             <div className="mb-4">
               <strong className="mr-2">Outros nomes:</strong>
               {character.aliases == null ? "Não possui este dado" : character.aliases}
@@ -56,16 +61,15 @@ const Character: FC<CharacterProps> = ({ character }) => {
             </div>
           </div>
         </div>
-        <button
-          className="mb-4 px-4 py-2 text-white bg-red-700 rounded-lg hover:bg-red-800 focus:outline-none focus:bg-red-800"
-          onClick={() => router.back()}
-        >
-          Voltar
-        </button>
+        <button className="mb-4 px-8 py-2 mt-8 text-white bg-red-700 rounded-lg hover:bg-red-800 focus:outline-none focus:bg-red-800 block mx-auto w-full md:w-auto">
+  <Link href="/">
+    <span>Voltar</span>
+  </Link>
+</button>
       </div>
     </div>
   );
-  
+
 };
 
 export default Character;
@@ -76,7 +80,7 @@ export const getServerSideProps: GetServerSideProps = async (param) => {
     `${urlBase}${route}-${id}?api_key=${apiKey}&format=${format}`
   );
   const character = response.data.results;
-    
+
   return {
     props: {
       character: character,
