@@ -1,4 +1,4 @@
-# Projeto iDinheiro - dev pl.
+# Projeto Comic Vine personagens - iDinheiro.
 
 O projeto foi criado em Next.js e Typescript. O projeto é configurado com ESLint. Os testes foram realizados com Cypress e estilisado com bootstrap.
 
