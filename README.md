@@ -21,7 +21,7 @@ https://github.com/biancasmtr/project-idinheiro.git
 ## Navegue até o repositório clonado
 
 ``` 
-cd project-idinheiro.git
+cd project-idinheiro
 ```
 
 ## Instalar dependências
