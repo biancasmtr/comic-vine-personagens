@@ -32,11 +32,13 @@ const Home: FC<HomeProps> = ({ characters }) => {
 
   return (
     <div className="bg-gray-200 h-screen">
-      <div className="container mx-auto py-12">
+      <header className="bg-white py-6">
+        <div className="container px-8">
+          <h1 className="text-4xl font-bold text-red-700 mx-auto text-center text-gray-800">Personagens Comic Vine</h1>
+        </div>
+      </header>
+      <div className="container mx-auto py-8">
         <div className="bg-white rounded-lg shadow-lg px-8 py-10">
-          <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-800 underline">Pesquisar personagem</h1>
-          </div>
           <div className="flex flex-col items-center">
             <div className="w-1/2 flex items-center border-b border-gray-400 py-2 mb-6">
               <input
@@ -74,7 +76,7 @@ const Home: FC<HomeProps> = ({ characters }) => {
       </div>
     </div>
   );
-  
+
 };
 
 export default Home;
