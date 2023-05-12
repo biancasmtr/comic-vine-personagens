@@ -14,24 +14,26 @@ Você pode configurar este projeto usando gerenciadores de pacotes npm ou yarn.
 
 ## Clonar repositório
 
-```https://github.com/biancasmtr/project-idinheiro.git
+``` https://github.com/biancasmtr/project-idinheiro.git
 ```
 
 ## Navegue até o repositório clonado
 
-```cd project-idinheiro.git
+``` cd project-idinheiro.git
 ```
 
 ## Instalar dependências
 
-```yarn install
+``` yarn install
 #or
 npm install
 ```
 
 ## Iniciar servidor de desenvolvimento
 
-```
+``` yarn dev
+#or
+npm run dev
 ```
 
 Abra http://localhost:3000 com seu navegador para ver o resultado.
