@@ -25,34 +25,39 @@ const Character: FC<CharacterProps> = ({ character }) => {
   const router = useRouter();
 
   return (
-    <div className="container mx-auto my-10 px-4">
-      <div className="flex flex-col items-center">
+    <div className="bg-gray-200 h-screen">
+      <div className="container mx-auto py-12 bg-white rounded-lg shadow-lg px-8 py-10">
+        <div className="text-center mb-8">
+          <h1 className="text-4xl font-bold text-white bg-red-700 bg-opacity-75 px-4 py-2 rounded-md">
+            {character.name}
+          </h1>
+        </div>
         <div className="flex flex-col md:flex-row items-center">
           <div className="md:mr-10 mb-6 md:mb-0">
             <img
               src={character.image.original_url}
               alt={character.name}
               className="rounded-lg shadow-md"
+              width={400}
             />
           </div>
           <div className="text-left">
-            <h1 className="text-3xl font-bold mb-4">{character.name}</h1>
             <div className="mb-4">
               <strong className="mr-2">Nome real:</strong>
-              {character.real_name}
+              {character.real_name == null ? "Não possui este dado" : character.real_name}
             </div>
             <div className="mb-4">
               <strong className="mr-2">Outros nomes:</strong>
-              {character.aliases}
+              {character.aliases == null ? "Não possui este dado" : character.aliases}
             </div>
             <div className="mb-4">
               <strong className="mr-2">Gênero:</strong>
-              {character.gender === 1 ? "Feminino" : "Masculino"}
+              {character.gender === 1 ? "Masculino" : "Feminino"}
             </div>
           </div>
         </div>
         <button
-          className="mb-4 px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:bg-blue-600"
+          className="mb-4 px-4 py-2 text-white bg-red-700 rounded-lg hover:bg-red-800 focus:outline-none focus:bg-red-800"
           onClick={() => router.back()}
         >
           Voltar
@@ -60,6 +65,7 @@ const Character: FC<CharacterProps> = ({ character }) => {
       </div>
     </div>
   );
+  
 };
 
 export default Character;

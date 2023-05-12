@@ -33,6 +33,7 @@ const Home: FC<HomeProps> = ({ characters }) => {
   return (
     <div className="bg-gray-200 h-screen">
       <header className="bg-white py-6">
+        <title>Personagens Comic Vine</title>
         <div className="container px-8">
           <h1 className="text-4xl font-bold text-red-700 mx-auto text-center text-gray-800">Personagens Comic Vine</h1>
         </div>
