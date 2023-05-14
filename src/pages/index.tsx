@@ -56,6 +56,9 @@ const Home: FC<HomeProps> = ({ characters }) => {
                 Limpar
               </button>
             </div>
+            <div className="text-lg font-bold text-gray-700 mb-4">
+              {filteredCharacters.length} personagens encontrados
+            </div>
             {filteredCharacters.length === 0 ? (
               <div className="text-lg font-bold text-red-500">Lista vazia!</div>
             ) : (
