@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -36,3 +37,49 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+=======
+# Projeto Comic Vine personagens - iDinheiro com [`create-next-app`].
+
+O projeto foi criado em Next.js e Typescript. O projeto é configurado com ESLint. Os testes foram realizados com Cypress e estilisado com bootstrap.
+
+Este projeto usa a versão 13.4.1 do next.js. Leia mais sobre [Nextjs 13.4](https://nextjs.org/blog/next-13-4)
+
+## Antes de começar
+
+Certifique-se de ter instalado o Node.js 12.22.0 ou superior em sua máquina. Você pode usar o nvm para gerenciar várias versões de nós em sua máquina.
+
+## Começando
+
+Você pode configurar este projeto usando gerenciadores de pacotes npm ou yarn.
+
+## Clonar repositório
+
+``` 
+https://github.com/biancasmtr/project-idinheiro.git
+```
+
+## Navegue até o repositório clonado
+
+``` 
+cd project-idinheiro
+```
+
+## Instalar dependências
+
+``` 
+yarn install
+#or
+npm install
+```
+
+## Iniciar servidor de desenvolvimento
+
+``` 
+yarn dev
+#or
+npm run dev
+```
+
+Abra http://localhost:3000 com seu navegador para ver o resultado.
+
+>>>>>>> 5b6c9a3c59fb1365d555a6aeab173d6e3caf4439
