@@ -42,4 +42,3 @@ npm run dev
 
 Abra http://localhost:3000 com seu navegador para ver o resultado.
 
->>>>>>> 5b6c9a3c59fb1365d555a6aeab173d6e3caf4439
