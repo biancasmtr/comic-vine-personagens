@@ -1,6 +1,8 @@
 # Projeto Comic Vine personagens - iDinheiro com [`create-next-app`].
 
-O projeto foi criado em Next.js e Typescript. O projeto é configurado com ESLint. Os testes foram realizados com Cypress e estilisado com bootstrap.
+O projeto consiste em um site simples onde apresenta na primeira página de listagem de personagens da [API Comic Vine] (https://comicvine.gamespot.com/) (limitado a 100 personagens). Na tela possui um campo de filtro onde é possível pesquisar pelo nome do personagem e um botão onde você consegue alterar o modo de listagem para "grid" ou "lista". Ao escolher um personagem você pode clicar e acessar os detalhes do mesmo, as informações são: Nome, nome real, apelidos, data de nascimento, gênero e descrição. Nessa tela há um botão "voltar" que te leva novamente para a página inicial do site.
+
+O projeto foi criado em Next.js e Typescript. O projeto é configurado com ESLint. Os testes foram realizados com Cypress e estilisado com Tailwind CSS. O deploy do projeto foi realizado no Vercel [neste link] (https://project-idinheiro-affu.vercel.app/).
 
 Este projeto usa a versão 13.4.1 do next.js. Leia mais sobre [Nextjs 13.4](https://nextjs.org/blog/next-13-4)
 
