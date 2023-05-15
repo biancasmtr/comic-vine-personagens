@@ -20,6 +20,7 @@ type CharacterProps = {
     image: {
       original_url: string;
     };
+    description: string;
   };
 };
 
@@ -86,9 +87,9 @@ const Character: FC<CharacterProps> = ({ character }) => {
               )}
             </div>
             <div className="mb-4">
-              <strong className="mr-2">Outros nomes:</strong>
+              <strong className="mr-2">Apelidos:</strong>
               {character.aliases == null ? (
-                <span>Não possui este dado</span>
+                <span className="text-red-500">Não possui essa informação</span>
               ) : (character.aliases)}
             </div>
             <div className="mb-4">
@@ -103,6 +104,14 @@ const Character: FC<CharacterProps> = ({ character }) => {
               <strong className="mr-2">Gênero:</strong>
               {character.gender === 1 ? "Masculino" : "Feminino"}
             </div>
+            {/* <div className="mb-4">
+              <strong className="mr-2">Descrição:</strong>
+              {character.description == null ? (
+                <span className="text-red-500">Não possui essa informação</span>
+              ) : (
+                <div dangerouslySetInnerHTML={{ __html: character.description }} />
+              )}
+            </div> */}
           </div>
         </div>
         <button className="mb-4 px-8 py-2 mt-8 text-white bg-red-700 rounded-lg hover:bg-red-800 focus:outline-none focus:bg-red-800 block mx-auto w-full md:w-auto">
