@@ -19,7 +19,7 @@ type CharacterProps = {
     birth: string;
     image: {
       original_url: string;
-    };
+    }[];
     description: string;
   };
 };
@@ -34,6 +34,8 @@ const Character: FC<CharacterProps> = ({ character }) => {
   const handleNextImage = () => {
     setCurrentImageIndex((prevIndex) => prevIndex + 1);
   };
+  
+  const imageUrl = character.image && character.image.original_url;
 
   return (
     <div className="container mx-auto py-8 px-8 min-h-100vh">
@@ -51,7 +53,7 @@ const Character: FC<CharacterProps> = ({ character }) => {
             {character.image && (
               <>
                 <img
-                  src={character.image.original_url}
+                  src={imageUrl}
                   alt={character.name}
                   className="rounded-lg shadow-md"
                   width={300}
@@ -65,7 +67,7 @@ const Character: FC<CharacterProps> = ({ character }) => {
                       Anterior
                     </button>
                   )}
-                  {currentImageIndex < character.image.length - 1 && (
+                  {character.image && currentImageIndex < character.image.length - 1 && (
                     <button
                       className="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
                       onClick={handleNextImage}
