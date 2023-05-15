@@ -19,7 +19,7 @@ type CharacterProps = {
     birth: string;
     image: {
       original_url: string;
-    }[];
+    };
     description: string;
   };
 };
@@ -35,8 +35,6 @@ const Character: FC<CharacterProps> = ({ character }) => {
     setCurrentImageIndex((prevIndex) => prevIndex + 1);
   };
   
-  const imageUrl = character.image && character.image.original_url;
-
   return (
     <div className="container mx-auto py-8 px-8 min-h-100vh">
       <header>
@@ -50,15 +48,15 @@ const Character: FC<CharacterProps> = ({ character }) => {
         </div>
         <div className="flex flex-col md:flex-row items-center justify-center">
           <div className="md:mr-10 mb-6 md:mb-0 flex justify-center">
-            {character.image && (
+          {character.image && (
               <>
                 <img
-                  src={imageUrl}
+                  src={character.image.original_url}
                   alt={character.name}
                   className="rounded-lg shadow-md"
                   width={300}
                 />
-                <div className="flex justify-between mb-2">
+                {/* <div className="flex justify-between mb-2">
                   {currentImageIndex > 0 && (
                     <button
                       className="bg-red-700 hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
@@ -75,7 +73,7 @@ const Character: FC<CharacterProps> = ({ character }) => {
                       Próxima
                     </button>
                   )}
-                </div>
+                </div> */}
               </>
             )}
           </div>
