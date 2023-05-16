@@ -41,6 +41,8 @@ const Character: FC<CharacterProps> = ({ character }) => {
     <div className="container mx-auto py-8 px-8 min-h-100vh">
       <header>
         <title>Comic Vine - Detalhes personagens</title>
+        <meta name="description" content="A exibe os detalhes do personagem selecionado na pagina anterior da API comic vine" />
+        <meta name="robots" content="character,detalhes"/>
       </header>
       <div className="container mx-auto py-8 bg-white rounded-lg shadow-lg px-8 min-h-100vh">
         <div className="text-center mb-8">

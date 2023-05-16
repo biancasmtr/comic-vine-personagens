@@ -76,6 +76,8 @@ const Home: FC<HomeProps> = ({ characters }) => {
         <div className="container px-8">
           <h1 className="text-4xl font-bold text-white mx-auto text-center text-gray-800">Personagens Comic Vine</h1>
         </div>
+        <meta name="description" content="A pagina contém uma listagem de 100 personagens da API comic vine" />
+        <meta name="robots" content="index,home"/>
       </header>
       <div className="container mx-auto py-8">
         <div className="bg-white rounded-lg shadow-lg px-8 py-10">
